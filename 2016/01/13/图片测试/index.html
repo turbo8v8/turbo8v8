@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ssh使用 | Turbo</title>
+  <title>图片测试 | Turbo</title>
   <meta name="author" content="Turbo8v8">
   
-  <meta name="description" content="linux下ssh使用ssh安装
-ssh基本命令：1234ssh 用户名@目标机#会提示输入密码，输入目标机密码即可登录logout #退出ssh远程连接
-ssh免密码登录原理：在客户机上生成秘钥，把公钥放到要登录的机器上。具体操作如下：1、在本地机器上生成秘钥123ssh-keygen -t rs">
+  <meta name="description" content="1哈利路亚
+
+1test">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="ssh使用"/>
+  <meta property="og:title" content="图片测试"/>
   <meta property="og:site_name" content="Turbo"/>
 
   
@@ -93,7 +93,7 @@ ssh免密码登录原理：在客户机上生成秘钥，把公钥放到要登�
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> ssh使用</h1>
+			<h1 class="title title-inverse "> 图片测试</h1>
 		</div>		
 	
 
@@ -113,12 +113,11 @@ ssh免密码登录原理：在客户机上生成秘钥，把公钥放到要登�
 	<div class="mypage">		
 	  		
 
-	  <h2 id="linux下ssh使用"><a href="#linux下ssh使用" class="headerlink" title="linux下ssh使用"></a>linux下ssh使用</h2><p>ssh安装</p>
-<p>ssh基本命令：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ssh 用户名@目标机</div><div class="line"><span class="comment">#会提示输入密码，输入目标机密码即可登录</span></div><div class="line">logout </div><div class="line"><span class="comment">#退出ssh远程连接</span></div></pre></td></tr></table></figure></p>
-<p>ssh免密码登录原理：在客户机上生成秘钥，把公钥放到要登录的机器上。<br>具体操作如下：<br>1、在本地机器上生成秘钥<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa</div><div class="line">在本地机器上执行上面的命令会在用户根目录/.ssh 下生成两个文件id_rsa和id_rsa.pub</div><div class="line"><span class="comment">#其中id_rsa.pub是公钥</span></div></pre></td></tr></table></figure></p>
-<p>2、把生成的公钥放到远程机器上<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">scp .ssh/id_rsa.pub 用户名@远程机:/某有权限的目录/id_rsa.pub</div><div class="line"><span class="comment">#会提示输入密码，因为现在还没设置好免密码登录</span></div></pre></td></tr></table></figure></p>
-<p>3、把公钥添加进远程机的authorzied_keys文件里<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cat id_rsa.pub&gt;&gt;.ssh/authorized_keys</div><div class="line">chmod <span class="number">600</span> .ssh/authorized_keys</div><div class="line"><span class="comment">#authorized_keys 的权限需要设置成600</span></div></pre></td></tr></table></figure></p>
-<p>完成以上设置后再远程登录时就不需要密码了。</p>
+	  <hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">哈利路亚</div></pre></td></tr></table></figure>
+<p><img src="/images/DSC09129.jpg" alt="图片"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">test</div></pre></td></tr></table></figure>
+<p><img src="/images/DSC09137.jpg" alt="图片"></p>
 	  
 	</div>
 
@@ -127,14 +126,14 @@ ssh免密码登录原理：在客户机上生成秘钥，把公钥放到要登�
 	<div class="pagination">
 <ul class="pagination">
 	 
-		
-          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-        
+				
+    	<li class="prev"><a href="/2016/05/13/ssh使用/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2016/01/13/图片测试/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+          <li class="next disabled"><a>下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>
         
 	
 </ul>
@@ -185,7 +184,7 @@ ssh免密码登录原理：在客户机上生成秘钥，把公钥放到要登�
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2016-05-13 
+	2016-01-13 
 	</div>
 	
 
@@ -196,7 +195,7 @@ ssh免密码登录原理：在客户机上生成秘钥，把公钥放到要登�
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/linux/">linux<span>1</span></a></li>
+    <li><a href="/categories/乱七八糟/">乱七八糟<span>1</span></a></li>
   </li>
 
     </ul>
@@ -209,7 +208,7 @@ ssh免密码登录原理：在客户机上生成秘钥，把公钥放到要登�
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/备忘笔记/">备忘笔记<span>1</span></a></li> <li><a href="/tags/ssh/">ssh<span>1</span></a></li>
+  <li><a href="/tags/图片测试/">图片测试<span>1</span></a></li>
     </ul>
 	</div>
 		

@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档 | Turbo</title>
+  <title>Categories | Turbo</title>
   <meta name="author" content="Turbo8v8">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Categories"/>
   <meta property="og:site_name" content="Turbo"/>
 
   
@@ -84,54 +84,64 @@
 
   <div class="container">
   	<div class="content">
-    	 
-
-<!-- title -->
+    	 <!-- title -->
 <div class="page-header page-header-inverse ">
-  <h1 class="archive-title title title-inverse ">归档</h1>
+	 <h1 class="title title-inverse "><i class="fa fa-folder"></i> Categories</h1>
 </div>
 
-<div class="row page">
-  <!-- cols -->
-  
-  <div class="col-md-9">
+<div class="row page"> 
+
+	
+	    <div class="col-md-9">
 	
 
-	  <div id="top_search"></div>
+	<div id="top_search"></div>
 
-	  <div class="archive">
-		
-		
-		
+    
+        <div class="widget">
+			<ul class="tag_box inline list-unstyled">
 			
+				<li><a href="#linux">linux<span>1</span></a></li>
 			
-			<h4 class="archive-ul" data-toggle="collapse" data-target="#2016">2016<b class="caret"></b></h4>
-			<ul id="2016" class="collapse in">
+				<li><a href="#乱七八糟">乱七八糟<span>1</span></a></li>
 			
-		
-		<li class="listing-item">
-		<span class="date_class"> 2016-05-13 </span> &raquo;
-		
-		   <span class="title"><a href="/2016/05/13/ssh使用/" >ssh使用</a></span>
-		
-		</li>			
-		
-		
-		
-		<li class="listing-item">
-		<span class="date_class"> 2016-01-13 </span> &raquo;
-		
-		   <span class="title"><a href="/2016/01/13/图片测试/" >图片测试</a></span>
-		
-		</li>			
-		
-		</ul>
+			</ul>
 		</div>
+		
+        <div class="archive">
+		    
+		    <h4 class="archive-ul show" data-toggle="collapse" id="linux" data-target="#modal-linux"> linux <b class="caret"></b></h4>
+		    <ul id="modal-linux" class="collapse in">
 
-</div> <!-- col-md-9/col-md-12 -->
+		        
+			        
+		   	        <li class="listing-item"><a href="/2016/05/13/ssh使用/" >ssh使用</a></li>
+			        
+		        
+			        
+		        
+		   </ul>
+		   
+		    <h4 class="archive-ul show" data-toggle="collapse" id="乱七八糟" data-target="#modal-乱七八糟"> 乱七八糟 <b class="caret"></b></h4>
+		    <ul id="modal-乱七八糟" class="collapse in">
 
+		        
+			        
+		        
+			        
+		   	        <li class="listing-item"><a href="/2016/01/13/图片测试/" >图片测试</a></li>
+			        
+		        
+		   </ul>
+		   
+		   </ul>
+        </div>
+    
 
-<div class="col-md-3">
+</div> <!-- col-md-9 -->
+
+   
+	   <div class="col-md-3">
 	<div id="sidebar">
 	
 			
@@ -164,9 +174,9 @@
 		
 			<li><a href="/tags/备忘笔记/">备忘笔记<span>1</span></a></li>
 		
-			<li><a href="/tags/ssh/">ssh<span>1</span></a></li>
-		
 			<li><a href="/tags/图片测试/">图片测试<span>1</span></a></li>
+		
+			<li><a href="/tags/ssh/">ssh<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -210,8 +220,9 @@
 	</div> <!-- sidebar -->
 </div> <!-- col-md-3 -->
 
+   
 
-
+</div> <!-- row-fluid -->
 
 	</div>
   </div>
