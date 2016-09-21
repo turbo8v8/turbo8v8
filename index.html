@@ -22,7 +22,7 @@
   
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
@@ -40,7 +40,7 @@
 </head>
 
  <body>  
-  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+  <nav id="main-nav" class="navbar  navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	<span class="sr-only">Toggle navigation</span>
@@ -84,8 +84,8 @@
 
   <div class="container">
   	<div class="content">
-    	 <div class="page-header page-header-inverse ">
-  <h1 class="title title-inverse ">Turbo</h1>
+    	 <div class="page-header ">
+  <h1 class="title ">Turbo</h1>
 </div>
 
 <div class="row page">
@@ -109,9 +109,33 @@
 		
             
 		
+            
+		
         
         <!-- render other articles -->
         
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-06-12 </div>
+			<div class="article-title"><a href="/2016/06/12/语法高亮测试/" >语法高亮测试</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="sqlite3"><a href="#sqlite3" class="headerlink" title="sqlite3"></a>sqlite3</h2><h3 id="python-笔记-sqlite3"><a href="#python-笔记-sqlite3" class="headerlink" title="python 笔记 sqlite3"></a>python 笔记 sqlite3</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sqlite3</div><div class="line">conn=sqlite3,connect(<span class="string">'test.db'</span>)</div><div class="line">c=conn.cursor()</div><div class="line"><span class="comment">#执行sql命令</span></div><div class="line">c.execute(<span class="string">"insert into book values(1,1,'kitchen')"</span>)</div><div class="line">c.execute(<span class="string">"insert into book values(?,?,?)"</span>,[(<span class="number">2</span>,<span class="number">2</span>,<span class="string">'computer'</span>)])</div><div class="line"><span class="comment">#插入多行</span></div><div class="line">books=[(<span class="number">1</span>,<span class="number">1</span>,<span class="string">'cookRecipe'</span>,<span class="number">3</span>,<span class="number">12</span>,<span class="number">1</span>),</div><div class="line">(<span class="number">2</span>,<span class="number">3</span>,<span class="string">'python inero'</span>,<span class="number">17.5</span>,<span class="number">2</span>),</div><div class="line">(<span class="number">3</span>,<span class="number">2</span>,<span class="string">'OS intero'</span>,<span class="number">13.6</span>,<span class="number">2</span>),</div><div class="line">]</div><div class="line">c.executemany(<span class="string">'insert into book values(?,?,?,?,?)'</span>,books)</div><div class="line">conn.commit()</div><div class="line"><span class="comment">#查询数据</span></div><div class="line">c.execute(<span class="string">'select name from book order by id '</span>)</div><div class="line">print(c.fetchone())</div><div class="line">print(c.fetchall())</div><div class="line"><span class="comment">#查询多行</span></div><div class="line"><span class="keyword">for</span> row <span class="keyword">in</span> c.execute(<span class="string">'select * from book order by  id '</span>)</div><div class="line">    print(row)</div><div class="line"></div><div class="line">conn.close()</div></pre></td></tr></table></figure>
+	
+	</div>
+</div>
+
+           
+		
            
 			  
 	
@@ -157,9 +181,9 @@
 	
 		<hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">哈利路亚</div></pre></td></tr></table></figure>
-<p><img src="/images/DSC09129.jpg" alt="图片"></p>
+<p><img src="/images/DSC09129.JPG" alt="图片"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">test</div></pre></td></tr></table></figure>
-<p><img src="/images/DSC09137.jpg" alt="图片"></p>
+<p><img src="/images/DSC09137.JPG" alt="图片"></p>
 
 	
 	</div>
@@ -193,7 +217,7 @@
 			
   <div id="site_search">
    <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Busca" class="st-search-input st-default-search-input form-control"/>
    </div>  
   <div id="local-search-result"></div>
   </div>
@@ -202,10 +226,12 @@
 		
 			
 	<div class="widget">
-		<h4>分类</h4>
+		<h4>Categorias</h4>
 		<ul class="tag_box inline list-unstyled">
 		
 			<li><a href="/categories/linux/">linux<span>1</span></a></li>
+		
+			<li><a href="/categories/python/">python<span>1</span></a></li>
 		
 			<li><a href="/categories/乱七八糟/">乱七八糟<span>1</span></a></li>
 		
@@ -215,14 +241,16 @@
 		
 			
 	<div class="widget">
-		<h4>标签云</h4>
+		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/图片测试/">图片测试<span>1</span></a></li>
 		
 			<li><a href="/tags/ssh/">ssh<span>1</span></a></li>
 		
-			<li><a href="/tags/备忘笔记/">备忘笔记<span>1</span></a></li>
+			<li><a href="/tags/sqlite/">sqlite<span>1</span></a></li>
+		
+			<li><a href="/tags/备忘笔记/">备忘笔记<span>2</span></a></li>
+		
+			<li><a href="/tags/图片测试/">图片测试<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -232,8 +260,12 @@
 		
 			
 <div class="widget">
-  <h4>最新文章</h4>
+  <h4>Posts recentes</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2016/06/12/语法高亮测试/" ><i class="fa fa-file-o"></i>语法高亮测试</a>
+      </li>
     
       <li>
         <a href="/2016/05/13/ssh使用/" ><i class="fa fa-file-o"></i>ssh使用</a>
@@ -249,14 +281,14 @@
 		
 			
 <div class="widget">
-	<h4>链接</h4>
+	<h4>Links</h4>
 	<ul class="blogroll list-unstyled">
 	
-		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+		<li><i class="fa-anchor"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
 	
-		<li><i class="fa fa-github"></i><a href="http://www.github.com/wzpan" title="My Github account." target="_blank"]);">My Github</a></li>
+		<li><i class="fa fa-github"></i><a href="https://github.com/turbo8v8" title="My Github account." target="_blank"]);">My Github</a></li>
 	
-		<li><i class="fa fa-linkedin"></i><a href="http://www.linkedin.com/in/hahack" title="My Linkin account." target="_blank"]);">My LinkedIn</a></li>
+		<li><i class="fa fa-linkedin"></i><a href="" title="My Linkin account." target="_blank"]);">My LinkedIn</a></li>
 	
 	</ul>
 </div>
