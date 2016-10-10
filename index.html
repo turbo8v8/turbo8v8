@@ -53,26 +53,26 @@
 		<ul class="nav navbar-nav">
 		  
 		  <li>
-			<a href="/archives/" title="All the articles.">
-			  <i class="fa fa-archive"></i>Archives
-			</a>
-		  </li>
-		  
-		  <li>
 			<a href="/categories/" title="All the categories.">
-			  <i class="fa fa-folder"></i>Categories
+			  <i class="fa fa-folder"></i>分类
 			</a>
 		  </li>
 		  
 		  <li>
 			<a href="/tags/" title="All the tags.">
-			  <i class="fa fa-tags"></i>Tags
+			  <i class="fa fa-tags"></i>标签
 			</a>
 		  </li>
 		  
 		  <li>
 			<a href="/about/" title="About me.">
-			  <i class="fa fa-user"></i>About
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/blog/其他-自用列表/" title="自用工具列表.">
+			  <i class="fa fa-archive"></i>自用列表
 			</a>
 		  </li>
 		  
@@ -96,7 +96,7 @@
 
 		<div class="slogan">
       <i class="fa fa-heart"></i>
-      记一下笔记，过几天再来看看自己有多蠢。
+      每天进步一丢丢。
 </div>    
 		<div id="top_search"></div>
 		<div class="mypage">
@@ -104,6 +104,12 @@
 		<!-- title and entry -->
         <!-- render top articles firstly -->
         
+		
+            
+		
+            
+		
+            
 		
             
 		
@@ -119,8 +125,38 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-06-19 </div>
+			<div class="article-title"><a href="/blog/linux-实用快捷键/" >linux实用快捷键</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="linux实用快捷键"><a href="#linux实用快捷键" class="headerlink" title="linux实用快捷键"></a>linux实用快捷键</h2><h4 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h4><ol>
+<li><strong>Tab：</strong>自动补全</li>
+<li><strong>Ctrl+Shift+V：</strong>粘贴</li>
+</ol>
+<h4 id="图形界面"><a href="#图形界面" class="headerlink" title="图形界面"></a>图形界面</h4><ol>
+<li><strong>Ctrl+Shift+Up：</strong>向上回滚显示shell窗口的输出结果</li>
+<li><strong>Ctrl+Alt+Up/Down：</strong>切换虚拟桌面</li>
+</ol>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-06-12 </div>
-			<div class="article-title"><a href="/2016/06/12/语法高亮测试/" >语法高亮测试</a></div>						
+			<div class="article-title"><a href="/blog/其他-语法高亮测试/" >语法高亮测试</a></div>						
 		</h3>
 	
 
@@ -141,8 +177,35 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-06-11 </div>
+			<div class="article-title"><a href="/blog/linux-下软件安装/" >linux下软件安装</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="linux下软件安装"><a href="#linux下软件安装" class="headerlink" title="linux下软件安装"></a>linux下软件安装</h2><h4 id="首先解压压缩包"><a href="#首先解压压缩包" class="headerlink" title="首先解压压缩包"></a>首先解压压缩包</h4><p>为方便维护推荐都解压到/usr/lib/目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -xvf Sublime\ Text\ 2.0.1.tar.bz2</div></pre></td></tr></table></figure>
+<h4 id="如果是编译好的程序，只需要把程序路径加入-PATH环境变量即可。"><a href="#如果是编译好的程序，只需要把程序路径加入-PATH环境变量即可。" class="headerlink" title="如果是编译好的程序，只需要把程序路径加入$PATH环境变量即可。"></a>如果是编译好的程序，只需要把程序路径加入$PATH环境变量即可。</h4><p>或者在/usr/bin/目录下做个链接即可，<br>这样做是因为$PATH环境变量自动涵盖了/usr/lib这个目录。<br>以sublime为例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -s /usr/lib/Sublime\ Text\ 2/sublime_text /usr/bin/sublime</div></pre></td></tr></table></figure></p>
+<p>其中的\为转义符</p>
+<h4 id="编译安装："><a href="#编译安装：" class="headerlink" title="编译安装："></a>编译安装：</h4><p>编译安装需要用到gcc和make<br>以nodeJS为例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">yum -y install gcc</div><div class="line">yum -y install gcc-c++</div><div class="line">yum -y install make automake</div><div class="line">wget http://nodejs.org/dist/v0.10.29/node-v0.10.29.tar.gz</div><div class="line">tar -xvzf node-v0.10.29.tar.gz </div><div class="line">cd  进入解压目录</div><div class="line">./configure </div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure></p>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-05-13 </div>
-			<div class="article-title"><a href="/2016/05/13/ssh使用/" >ssh使用</a></div>						
+			<div class="article-title"><a href="/blog/linux-ssh使用/" >ssh使用</a></div>						
 		</h3>
 	
 
@@ -154,7 +217,7 @@
 		<h2 id="linux下ssh使用"><a href="#linux下ssh使用" class="headerlink" title="linux下ssh使用"></a>linux下ssh使用</h2><p>ssh安装</p>
 <p>ssh基本命令：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ssh 用户名@目标机</div><div class="line"><span class="comment">#会提示输入密码，输入目标机密码即可登录</span></div><div class="line">logout </div><div class="line"><span class="comment">#退出ssh远程连接</span></div></pre></td></tr></table></figure></p>
 <p>ssh免密码登录原理：在客户机上生成秘钥，把公钥放到要登录的机器上。<br>具体操作如下：<br>1、在本地机器上生成秘钥<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa</div><div class="line">在本地机器上执行上面的命令会在用户根目录/.ssh 下生成两个文件id_rsa和id_rsa.pub</div><div class="line"><span class="comment">#其中id_rsa.pub是公钥</span></div></pre></td></tr></table></figure></p>
-<p>2、把生成的公钥放到远程机器上<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">scp .ssh/id_rsa.pub 用户名@远程机:/某有权限的目录/id_rsa.pub</div><div class="line"><span class="comment">#会提示输入密码，因为现在还没设置好免密码登录</span></div></pre></td></tr></table></figure></p>
+<p>2、把生成的公钥放到远程机器上<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">scp .ssh/id_rsa.pub 用户名@远程机:/某有权限的目录/id_rsa.pub</div><div class="line"><span class="comment">#会提示输入密码，因为现在还没设置好免密码登录</span></div><div class="line"><span class="comment">#2016-10-03逛论坛发现更简单的命令</span></div><div class="line">$ ssh-copy-id user@host</div></pre></td></tr></table></figure></p>
 <p>3、把公钥添加进远程机的authorzied_keys文件里<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cat id_rsa.pub&gt;&gt;.ssh/authorized_keys</div><div class="line">chmod <span class="number">600</span> .ssh/authorized_keys</div><div class="line"><span class="comment">#authorized_keys 的权限需要设置成600</span></div></pre></td></tr></table></figure></p>
 <p>完成以上设置后再远程登录时就不需要密码了。</p>
 
@@ -169,8 +232,84 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-05-13 </div>
+			<div class="article-title"><a href="/blog/其他-自用列表/" >藤原とうふ店（自家用）</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="自用收藏夹"><a href="#自用收藏夹" class="headerlink" title="自用收藏夹"></a>自用收藏夹</h2><h4 id="Python：https-www-python-org"><a href="#Python：https-www-python-org" class="headerlink" title="Python：https://www.python.org/"></a>Python：<a href="https://www.python.org/" target="_blank" rel="external">https://www.python.org/</a></h4><ol>
+<li>爬虫：<ol>
+<li>Scrapy：<a href="https://scrapy.org/" target="_blank" rel="external">https://scrapy.org/</a></li>
+<li>BeautifulSoup：<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/index.html" target="_blank" rel="external">https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/index.html</a></li>
+</ol>
+</li>
+<li>Web：<ol>
+<li>Flask：<a href="http://flask.pocoo.org/" target="_blank" rel="external">http://flask.pocoo.org/</a></li>
+<li>Flask中文文档：<a href="http://docs.jinkan.org/docs/flask/" target="_blank" rel="external">http://docs.jinkan.org/docs/flask/</a></li>
+</ol>
+</li>
+<li>数据库访问：<ol>
+<li>SQLAlchemy：<a href="http://www.sqlalchemy.org/" target="_blank" rel="external">http://www.sqlalchemy.org/</a></li>
+<li>pymongo：流行？Scrapy的样例中有，待尝试。</li>
+</ol>
+</li>
+<li>数据处理：<ol>
+<li>matplotlib：<a href="http://matplotlib.org/" target="_blank" rel="external">http://matplotlib.org/</a></li>
+</ol>
+</li>
+<li>PyCharm：<a href="https://www.jetbrains.com/pycharm/download/#section=linux" target="_blank" rel="external">https://www.jetbrains.com/pycharm/download/#section=linux</a></li>
+</ol>
+<h4 id="数据库："><a href="#数据库：" class="headerlink" title="数据库："></a>数据库：</h4><ol>
+<li>MySQL：</li>
+<li>Redis：<a href="http://redis.io/" target="_blank" rel="external">http://redis.io/</a></li>
+<li>MongoDB：</li>
+</ol>
+<h4 id="NodeJS："><a href="#NodeJS：" class="headerlink" title="NodeJS："></a>NodeJS：</h4><ol>
+<li>Web：<ol>
+<li>Express：<a href="http://expressjs.com/" target="_blank" rel="external">http://expressjs.com/</a></li>
+<li>KoaJS：<a href="http://koajs.cn/" target="_blank" rel="external">http://koajs.cn/</a></li>
+</ol>
+</li>
+<li>Gulp：前端自动化</li>
+<li>淘宝NPM镜像：<a href="http://npm.taobao.org/" target="_blank" rel="external">http://npm.taobao.org/</a></li>
+</ol>
+<h4 id="Linux："><a href="#Linux：" class="headerlink" title="Linux："></a>Linux：</h4><ol>
+<li></li>
+<li>win系统下的免费ssh客户端：<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank" rel="external">http://www.chiark.greenend.org.uk/~sgtatham/putty/</a></li>
+</ol>
+<h4 id="工具："><a href="#工具：" class="headerlink" title="工具："></a>工具：</h4><ol>
+<li>mopaas云：<a href="http://www.mopaas.com/portal.jsp" target="_blank" rel="external">http://www.mopaas.com/portal.jsp</a></li>
+<li>阿里云控制台：<a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fecs.console.aliyun.com%2F#/home" target="_blank" rel="external">https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fecs.console.aliyun.com%2F#/home</a></li>
+</ol>
+<h4 id="前端库："><a href="#前端库：" class="headerlink" title="前端库："></a>前端库：</h4><ol>
+<li>React：<br>  <em>那么，我从头开始创建 app 的首选方案是什么呢？<br>  从长远而言，我个人倾向于选择 React，使用 Redux 架构，使用 Axios 支持 promise-ready 的 HTTP 请求，以及使用 react-router 处理路由。不过，这也取决于团队的经验：如果有专门写 HTML 和 CSS 的人，我肯定会选择 Angular。两个框架都各有利弊，从构建可维护项目的目的来考虑，最关键的还是如何让小伙伴们写出好代码。————网上一前端的评价，可参考</em></li>
+</ol>
+<h4 id="其他："><a href="#其他：" class="headerlink" title="其他："></a>其他：</h4><ol>
+<li>创建、托管文档：<a href="https://readthedocs.org/" target="_blank" rel="external">https://readthedocs.org/</a></li>
+<li>多说评论系统：<a href="http://dev.duoshuo.com/" target="_blank" rel="external">http://dev.duoshuo.com/</a></li>
+<li>EverNoteAPI：<a href="https://github.com/evernote" target="_blank" rel="external">https://github.com/evernote</a></li>
+<li>开源中国常用API索引：<a href="http://tool.oschina.net/apidocs" target="_blank" rel="external">http://tool.oschina.net/apidocs</a></li>
+<li>聚合数据（API提供商，多是鸡肋，可拿来玩）：<a href="https://www.juhe.cn/" target="_blank" rel="external">https://www.juhe.cn/</a></li>
+</ol>
+
+	
+	</div>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-01-13 </div>
-			<div class="article-title"><a href="/2016/01/13/图片测试/" >图片测试</a></div>						
+			<div class="article-title"><a href="/blog/其他-图片测试/" >图片测试</a></div>						
 		</h3>
 	
 
@@ -217,7 +356,7 @@
 			
   <div id="site_search">
    <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
    </div>  
   <div id="local-search-result"></div>
   </div>
@@ -226,14 +365,16 @@
 		
 			
 	<div class="widget">
-		<h4>Categories</h4>
+		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/linux/">linux<span>1</span></a></li>
+			<li><a href="/categories/linux/">linux<span>3</span></a></li>
 		
 			<li><a href="/categories/python/">python<span>1</span></a></li>
 		
 			<li><a href="/categories/乱七八糟/">乱七八糟<span>1</span></a></li>
+		
+			<li><a href="/categories/其他/">其他<span>1</span></a></li>
 		
 		</ul>
 	</div>
@@ -241,16 +382,22 @@
 		
 			
 	<div class="widget">
-		<h4>Tag Cloud</h4>
+		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/图片测试/">图片测试<span>1</span></a></li>
+			<li><a href="/tags/快捷键/">快捷键<span>1</span></a></li>
 		
-			<li><a href="/tags/备忘笔记/">备忘笔记<span>2</span></a></li>
+			<li><a href="/tags/ssh/">ssh<span>1</span></a></li>
+		
+			<li><a href="/tags/软件安装/">软件安装<span>1</span></a></li>
+		
+			<li><a href="/tags/其他/">其他<span>1</span></a></li>
 		
 			<li><a href="/tags/sqlite/">sqlite<span>1</span></a></li>
 		
-			<li><a href="/tags/ssh/">ssh<span>1</span></a></li>
+			<li><a href="/tags/备忘笔记/">备忘笔记<span>4</span></a></li>
+		
+			<li><a href="/tags/图片测试/">图片测试<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -260,19 +407,27 @@
 		
 			
 <div class="widget">
-  <h4>Recent Posts</h4>
+  <h4>最新文章</h4>
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2016/06/12/语法高亮测试/" ><i class="fa fa-file-o"></i>语法高亮测试</a>
+        <a href="/blog/linux-实用快捷键/" ><i class="fa fa-file-o"></i>linux实用快捷键</a>
       </li>
     
       <li>
-        <a href="/2016/05/13/ssh使用/" ><i class="fa fa-file-o"></i>ssh使用</a>
+        <a href="/blog/其他-语法高亮测试/" ><i class="fa fa-file-o"></i>语法高亮测试</a>
       </li>
     
       <li>
-        <a href="/2016/01/13/图片测试/" ><i class="fa fa-file-o"></i>图片测试</a>
+        <a href="/blog/linux-下软件安装/" ><i class="fa fa-file-o"></i>linux下软件安装</a>
+      </li>
+    
+      <li>
+        <a href="/blog/linux-ssh使用/" ><i class="fa fa-file-o"></i>ssh使用</a>
+      </li>
+    
+      <li>
+        <a href="/blog/其他-自用列表/" ><i class="fa fa-file-o"></i>藤原とうふ店（自家用）</a>
       </li>
     
   </ul>
@@ -281,7 +436,7 @@
 		
 			
 <div class="widget">
-	<h4>Links</h4>
+	<h4>链接</h4>
 	<ul class="blogroll list-unstyled">
 	
 		<li><i class="fa-anchor"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
@@ -289,6 +444,8 @@
 		<li><i class="fa fa-github"></i><a href="https://github.com/turbo8v8" title="My Github account." target="_blank"]);">My Github</a></li>
 	
 		<li><i class="fa fa-linkedin"></i><a href="" title="My Linkin account." target="_blank"]);">My LinkedIn</a></li>
+	
+		<li><i class="fa-anchor"></i><a href="http://www.mifengtd.cn/" title="时间管理" target="_blank"]);">褪墨▪时间管理</a></li>
 	
 	</ul>
 </div>
