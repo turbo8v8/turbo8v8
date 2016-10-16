@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>语法高亮测试 | Turbo</title>
+  <title>ssh使用 | Turbo</title>
   <meta name="author" content="Turbo8v8">
   
-  <meta name="description" content="sqlite3python 笔记 sqlite312345678910111213141516171819202122import sqlite3conn=sqlite3,connect(&#39;test.db&#39;)c=conn.cursor()#执行sql命令c.execute(&quot;insert into ">
+  <meta name="description" content="linux下ssh使用ssh安装
+ssh基本命令：1234ssh 用户名@目标机#会提示输入密码，输入目标机密码即可登录logout #退出ssh远程连接
+ssh免密码登录原理：在客户机上生成秘钥，把公钥放到要登录的机器上。具体操作如下：1、在本地机器上生成秘钥123ssh-keygen -t rs">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="语法高亮测试"/>
+  <meta property="og:title" content="ssh使用"/>
   <meta property="og:site_name" content="Turbo"/>
 
   
@@ -73,7 +75,7 @@
 		  </li>
 		  
 		  <li>
-			<a href="/blog/其他-自用列表/" title="自用工具列表.">
+			<a href="/blog/其他-自用列表.html" title="自用工具列表.">
 			  <i class="fa fa-archive"></i>自用列表
 			</a>
 		  </li>
@@ -91,7 +93,7 @@
 
 	
 		<div class="page-header ">		
-			<h1 class="title "> 语法高亮测试</h1>
+			<h1 class="title "> ssh使用</h1>
 		</div>		
 	
 
@@ -111,7 +113,13 @@
 	<div class="mypage">		
 	  		
 
-	  <h2 id="sqlite3"><a href="#sqlite3" class="headerlink" title="sqlite3"></a>sqlite3</h2><h3 id="python-笔记-sqlite3"><a href="#python-笔记-sqlite3" class="headerlink" title="python 笔记 sqlite3"></a>python 笔记 sqlite3</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sqlite3</div><div class="line">conn=sqlite3,connect(<span class="string">'test.db'</span>)</div><div class="line">c=conn.cursor()</div><div class="line"><span class="comment">#执行sql命令</span></div><div class="line">c.execute(<span class="string">"insert into book values(1,1,'kitchen')"</span>)</div><div class="line">c.execute(<span class="string">"insert into book values(?,?,?)"</span>,[(<span class="number">2</span>,<span class="number">2</span>,<span class="string">'computer'</span>)])</div><div class="line"><span class="comment">#插入多行</span></div><div class="line">books=[(<span class="number">1</span>,<span class="number">1</span>,<span class="string">'cookRecipe'</span>,<span class="number">3</span>,<span class="number">12</span>,<span class="number">1</span>),</div><div class="line">(<span class="number">2</span>,<span class="number">3</span>,<span class="string">'python inero'</span>,<span class="number">17.5</span>,<span class="number">2</span>),</div><div class="line">(<span class="number">3</span>,<span class="number">2</span>,<span class="string">'OS intero'</span>,<span class="number">13.6</span>,<span class="number">2</span>),</div><div class="line">]</div><div class="line">c.executemany(<span class="string">'insert into book values(?,?,?,?,?)'</span>,books)</div><div class="line">conn.commit()</div><div class="line"><span class="comment">#查询数据</span></div><div class="line">c.execute(<span class="string">'select name from book order by id '</span>)</div><div class="line">print(c.fetchone())</div><div class="line">print(c.fetchall())</div><div class="line"><span class="comment">#查询多行</span></div><div class="line"><span class="keyword">for</span> row <span class="keyword">in</span> c.execute(<span class="string">'select * from book order by  id '</span>)</div><div class="line">    print(row)</div><div class="line"></div><div class="line">conn.close()</div></pre></td></tr></table></figure>	  
+	  <h2 id="linux下ssh使用"><a href="#linux下ssh使用" class="headerlink" title="linux下ssh使用"></a>linux下ssh使用</h2><p>ssh安装</p>
+<p>ssh基本命令：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ssh 用户名@目标机</div><div class="line"><span class="comment">#会提示输入密码，输入目标机密码即可登录</span></div><div class="line">logout </div><div class="line"><span class="comment">#退出ssh远程连接</span></div></pre></td></tr></table></figure></p>
+<p>ssh免密码登录原理：在客户机上生成秘钥，把公钥放到要登录的机器上。<br>具体操作如下：<br>1、在本地机器上生成秘钥<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa</div><div class="line">在本地机器上执行上面的命令会在用户根目录/.ssh 下生成两个文件id_rsa和id_rsa.pub</div><div class="line"><span class="comment">#其中id_rsa.pub是公钥</span></div></pre></td></tr></table></figure></p>
+<p>2、把生成的公钥放到远程机器上<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">scp .ssh/id_rsa.pub 用户名@远程机:/某有权限的目录/id_rsa.pub</div><div class="line"><span class="comment">#会提示输入密码，因为现在还没设置好免密码登录</span></div><div class="line"><span class="comment">#2016-10-03逛论坛发现更简单的命令</span></div><div class="line">$ ssh-copy-id user@host</div></pre></td></tr></table></figure></p>
+<p>3、把公钥添加进远程机的authorzied_keys文件里<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cat id_rsa.pub&gt;&gt;.ssh/authorized_keys</div><div class="line">chmod <span class="number">600</span> .ssh/authorized_keys</div><div class="line"><span class="comment">#authorized_keys 的权限需要设置成600</span></div></pre></td></tr></table></figure></p>
+<p>完成以上设置后再远程登录时就不需要密码了。</p>
+	  
 	</div>
 
 	<div>
@@ -120,13 +128,13 @@
 <ul class="pagination">
 	 
 				
-    	<li class="prev"><a href="/blog/linux-实用快捷键/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+    	<li class="prev"><a href="/blog/其他-工具列表.html" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
   		
 
         <li><a href="/categories/"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/blog/linux-下软件安装/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/blog/其他-自用列表.html" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -162,7 +170,7 @@
 	<!-- comment -->
 	
 <section id="comment">
-  <h2 class="title">留言</h2>
+  <h2 class="title">Comments</h2>
 
   
 </section>
@@ -177,7 +185,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2016-06-12 
+	2016-05-13 
 	</div>
 	
 
@@ -188,7 +196,7 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/python/">python<span>1</span></a></li>
+    <li><a href="/categories/linux/">linux<span>3</span></a></li>
   </li>
 
     </ul>
@@ -201,7 +209,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/备忘笔记/">备忘笔记<span>4</span></a></li> <li><a href="/tags/sqlite/">sqlite<span>1</span></a></li>
+  <li><a href="/tags/ssh/">ssh<span>1</span></a></li> <li><a href="/tags/捯饬装备/">捯饬装备<span>2</span></a></li>
     </ul>
 	</div>
 		
